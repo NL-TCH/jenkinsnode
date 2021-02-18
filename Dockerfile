@@ -2,7 +2,7 @@
 FROM hypriot/rpi-node
 
 # set maintainer
-LABEL maintainer "miiro@getintodevops.com"
+LABEL maintainer "dev@teunis.dev"
 
 # set a health check
 HEALTHCHECK --interval=5s \
