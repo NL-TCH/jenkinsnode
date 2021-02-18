@@ -1,5 +1,5 @@
 # use a node base image
-FROM node:7-onbuild
+FROM hypriot/rpi-node
 
 # set maintainer
 LABEL maintainer "miiro@getintodevops.com"
