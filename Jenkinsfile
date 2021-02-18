@@ -18,7 +18,7 @@ node {
         /* We test our image with a simple smoke test:
          * Run a curl inside the newly-build Docker image */
 
-        app.inside {
+        app.outside {
             sh 'curl http://172.17.0.1:8000 || exit 1'
         }
     }
