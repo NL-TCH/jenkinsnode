@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mjuuso/getintodevops-hellonode/"
+    "url": "https://github.com/NL-TCH/jenkinsnode/"
   },
   "keywords": [
     "node",
     "docker",
     "dockerfile"
   ],
-  "author": "miiro@getintodevops.com",
+  "author": "dev@teun.dev",
   "license": "ISC"
 }
