@@ -19,7 +19,7 @@ node {
          * Run a curl inside the newly-build Docker image */
 
         app.inside {
-            sh 'curl http://127.0.0.1:8000 || exit 1'
+            sh 'curl http://host.docker.internal:8000 || exit 1'
         }
     }
 
