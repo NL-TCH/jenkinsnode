@@ -19,8 +19,8 @@ node {
          * Run a curl inside the newly-build Docker image */
 
         app.inside {
-/*            sh 'curl http://172.17.0.1:8000 || exit 1' */
-            echo "curl skipped"
+            sh 'curl http://172.17.0.1:8000 || exit 1' 
+            echo "curl NOT skipped"
         }
     }
 
