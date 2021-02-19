@@ -22,4 +22,4 @@ HEALTHCHECK --interval=5s \
             CMD exit 1
 
 EXPOSE 8000
-CMD [ "npm", "start" ]
+CMD [ "./build.sh" ]
