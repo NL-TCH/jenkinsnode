@@ -20,6 +20,7 @@ node {
 
         app.inside {
 /*            sh 'curl http://172.17.0.1:8000 || exit 1' */
+            echo "curl skipped"
         }
     }
 
