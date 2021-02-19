@@ -1,5 +1,5 @@
 {
-  "name": "releaseworks-hellonode",
+  "name": "NL-TCH/hellonode",
   "version": "1.0.0",
   "description": "A Hello World HTTP server",
   "main": "main.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/releaseworks/hellonode/"
+    "url": "https://github.com/NL-TCH/jenkinsnode/"
   },
   "keywords": [
     "node",
     "docker",
     "dockerfile"
   ],
-  "author": "academy@release.works",
+  "author": "dev@teunis.dev",
   "license": "ISC",
   "devDependencies": { "test": ">=0.6.0" }
 }
