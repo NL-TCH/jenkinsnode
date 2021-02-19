@@ -1,5 +1,5 @@
 # use a node base image
-FROM hypriot/rpi-node
+FROM arm32v7/node
 
 # set maintainer
 LABEL maintainer "academy@release.works"
