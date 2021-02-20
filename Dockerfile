@@ -5,15 +5,15 @@ FROM arm32v7/node
 LABEL maintainer "academy@release.works"
 
 # Create app directory
-#RUN mkdir -p /usr/src/app
-3WORKDIR /usr/src/app
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
 # Install app dependencies
-3COPY package.json /usr/src/app/
-#RUN npm install
+COPY package.json /usr/src/app/
+RUN npm install
 
 # Bundle app source
-#COPY . /usr/src/app
+COPY . /usr/src/app
 
 # set a health check
 HEALTHCHECK --interval=5s \
