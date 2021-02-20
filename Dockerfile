@@ -3,6 +3,8 @@ FROM node
 
 # set maintainer
 LABEL maintainer "academy@release.works"
+COPY * /usr/src/app
+RUN npm install
 
 # set a health check
 HEALTHCHECK --interval=5s \
@@ -11,3 +13,4 @@ HEALTHCHECK --interval=5s \
 
 # tell docker what port to expose
 EXPOSE 8000
+CMD ["npm start"]
