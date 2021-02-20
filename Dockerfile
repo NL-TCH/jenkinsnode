@@ -3,7 +3,7 @@ FROM node
 
 # set maintainer
 LABEL maintainer "academy@release.works"
-COPY * /usr/src/app
+COPY . /usr/src/app
 RUN npm install
 
 # set a health check
