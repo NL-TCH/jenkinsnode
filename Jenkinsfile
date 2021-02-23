@@ -54,17 +54,12 @@ pipeline {
         }
         success {
             echo 'Build successfull'
-            mail to: 'teunishuman@kliksafe.nl',
-                 subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-                 body: "Something is wrong with ${env.BUILD_URL}"
         }
         aborted {
             echo 'I was aborted'
         }
         failure {
-            mail to: 'teunish@outlook.com',
-            subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-            body: "Something is wrong with ${env.BUILD_URL}"
+            echo 'FAILURE'
         }
     }
 }
