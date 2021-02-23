@@ -12,7 +12,7 @@ pipeline {
             steps{
                 /* This builds the actual image; synonymous to
                 * docker build on the command line */
-                step('step docker.build'){
+                script{
                     app = docker.build("dockerteun/hellonode")
                 }
             }
@@ -22,8 +22,10 @@ pipeline {
             steps{
                 /* Ideally, we would run a test framework against our image.
                 * For this example, we're using a Volkswagen-type approach ;-) */
-                app.inside {
-                    sh 'echo "Tests passed"'
+                script{
+                    app.inside {
+                        sh 'echo "Tests passed"'
+                    }
                 }
             }
         }
@@ -34,7 +36,7 @@ pipeline {
                  * First, the incremental build number from Jenkins
                  * Second, the 'latest' tag.
                  * Pushing multiple tags is cheap, as all the layers are reused. */
-                scripts{
+                script{
                     docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
                     app.push("${env.BUILD_NUMBER}")
                     app.push("latest")
