@@ -54,15 +54,39 @@ pipeline {
         }
         success {
             echo 'Build successfull'
-            mail bcc: '', body: "<b>Example</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "SUCCESS CI: Project name -> ${env.JOB_NAME}", to: "teunish@outlook.com"; 
+            mail bcc: '',
+            body: "<b>Example</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}",
+            cc: '',
+            charset: 'UTF-8',
+            from: '',
+            mimeType: 'text/html',
+            replyTo: '',
+            subject: "SUCCESS CI: Project name -> ${env.JOB_NAME}",
+            to: "teunish@outlook.com"; 
         }
         aborted {
-            echo 'I was aborted'
-            mail bcc: '', body: "<b>Example</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "ABORTED CI: Project name -> ${env.JOB_NAME}", to: "teunish@outlook.com"; 
+            echo 'Build aborted'
+            mail bcc: '',
+            body: "<b>Example</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}",
+            cc: '',
+            charset: 'UTF-8',
+            from: '',
+            mimeType: 'text/html',
+            replyTo: '',
+            subject: "ABORTED CI: Project name -> ${env.JOB_NAME}",
+            to: "teunish@outlook.com"; 
         }
         failure {
-            echo 'FAILURE'
-            mail bcc: '', body: "<b>Example</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "ERROR CI: Project name -> ${env.JOB_NAME}", to: "teunish@outlook.com"; 
+            echo 'Build failure'
+            mail bcc: '',
+            body: "<b>Example</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}",
+            cc: '',
+            charset: 'UTF-8',
+            from: '',
+            mimeType: 'text/html',
+            replyTo: '',
+            subject: "FAILURE CI: Project name -> ${env.JOB_NAME}",
+            to: "teunish@outlook.com"; 
         }
     }
 }
