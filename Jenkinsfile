@@ -53,9 +53,10 @@ pipeline {
             echo 'I will always say Hello!'
         }
         success {
-            mail to: 'teunish@outlook.com',
-            subject: "Pipeline successfull: ${currentBuild.fullDisplayName}",
-            body: "Build with success ${env.BUILD_URL}"
+            echo 'Build successfull'
+            mail to: 'teunishuman@kliksafe.nl',
+                 subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+                 body: "Something is wrong with ${env.BUILD_URL}"
         }
         aborted {
             echo 'I was aborted'
