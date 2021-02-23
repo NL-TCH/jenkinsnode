@@ -50,7 +50,7 @@ pipeline {
  
     post { 
         always { 
-            echo 'I will always say Hello!'
+            echo 'Build finished'
         }
         success {
             echo 'Build successfull'
