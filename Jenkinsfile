@@ -53,10 +53,9 @@ pipeline {
             echo 'I will always say Hello!'
         }
         success {
-            step([$class: 'Mailer',
-                notifyeveryBuild: true,
-                recipients: "teunish@outlook.com",
-                sendToIndividuals: true])"
+            mail to: 'teunish@outlook.com',
+            subject: "Pipeline successfull: ${currentBuild.fullDisplayName}",
+            body: "Build with success ${env.BUILD_URL}"
         }
         aborted {
             echo 'I was aborted'
