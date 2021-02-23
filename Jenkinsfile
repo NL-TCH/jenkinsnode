@@ -9,7 +9,7 @@ pipeline {
         }
 
         stage('Build image') {
-            steps{
+            script{
                 /* This builds the actual image; synonymous to
                 * docker build on the command line */
                 app = docker.build("dockerteun/hellonode")
@@ -17,7 +17,7 @@ pipeline {
         }
 
         stage('Test image') {
-            steps{
+            script{
                 /* Ideally, we would run a test framework against our image.
                 * For this example, we're using a Volkswagen-type approach ;-) */
                 app.inside {
@@ -27,7 +27,7 @@ pipeline {
         }
 
         stage('Push image') {
-            steps{
+            script{
                 /* Finally, we'll push the image with two tags:
                  * First, the incremental build number from Jenkins
                  * Second, the 'latest' tag.
