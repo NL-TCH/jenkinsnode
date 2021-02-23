@@ -33,4 +33,12 @@ node {
             app.push("latest")
         }
     }
+    post {
+        always {
+          step([$class: 'Mailer',
+            notifyEveryUnstableBuild: true,
+            recipients: "example@example.com",
+            sendToIndividuals: true])
+        }
+      }
 }
