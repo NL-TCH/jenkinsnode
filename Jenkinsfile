@@ -37,7 +37,7 @@ node {
         always {
           step([$class: 'Mailer',
             notifyEveryUnstableBuild: true,
-            recipients: "example@example.com",
+            recipients: "dev@teunis.dev",
             sendToIndividuals: true])
         }
       }
