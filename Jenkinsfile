@@ -33,12 +33,16 @@ node {
             app.push("latest")
         }
     }
+ 
     post {
         always {
-          step([$class: 'Mailer',
-            notifyEveryStableBuild: true,
-            recipients: "dev@teunis.dev",
-            sendToIndividuals: true])
+            mail bcc: '',
+                body: 'this is the body',
+                cc: '',
+                from: 'dev@teunis.dev',
+                replyTo: '',
+                subject: 'This is a test',
+                to: 'teunish@outlook.com'
         }
-      }
+    }
 }
