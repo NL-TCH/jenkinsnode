@@ -62,7 +62,7 @@ pipeline {
             mimeType: 'text/html',
             replyTo: '',
             subject: "SUCCESS CI: Project name -> ${env.JOB_NAME}",
-            to: "teunish@outlook.com"; 
+            to: "jenkins@teunis.dev"; 
         }
         aborted {
             echo 'Build aborted'
@@ -74,7 +74,7 @@ pipeline {
             mimeType: 'text/html',
             replyTo: '',
             subject: "ABORTED CI: Project name -> ${env.JOB_NAME}",
-            to: "teunish@outlook.com"; 
+            to: "jenkins@teunis.dev"; 
         }
         failure {
             echo 'Build failure'
@@ -86,7 +86,7 @@ pipeline {
             mimeType: 'text/html',
             replyTo: '',
             subject: "FAILURE CI: Project name -> ${env.JOB_NAME}",
-            to: "teunish@outlook.com"; 
+            to: "jenkins@teunis.dev"; 
         }
     }
 }
