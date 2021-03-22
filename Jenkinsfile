@@ -51,6 +51,7 @@ pipeline {
     post { 
         always { 
             echo 'Build finished'
+            discordSend description: "Jenkins Pipeline Build", footer: "Footer Text", link: env.BUILD_URL, result: currentBuild.currentResult, title: JOB_NAME, webhookURL: "https://discord.com/api/webhooks/823661234359500850/98GVlzQwe9k2b_RBP6leZFhef-1ydpHYKE960V1KQBL4aDnHEBIdc6Z95nnqKit7IziL"
         }
         success {
             echo 'Build successfull'
